@@ -13,10 +13,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../bower_components/polymerfire/polymerfire.html">
 <link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
-<link rel="import" href="my-view1.html">
+<link rel="import" href="anime-card.html">
 <link rel="import" href="my-icons.html">
 
-<dom-module id="my-app">
+<dom-module id="nyaalert-app">
   <template>
     <style>
       :host {
@@ -68,7 +68,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
         <div class="animes">
           <template is="dom-repeat" items="[[persistedAnimes]]" as="anime">
-            <my-view1 title="[[anime.$key]]" epi="[[anime.$val]]"></my-view1>
+            <anime-card title="[[anime.$key]]" epi="[[anime.$val]]"></anime-card>
           </template>
         </div>
     </app-header-layout>
@@ -77,7 +77,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script>
     Polymer({
-      is: 'my-app'
+      is: 'nyaalert-app'
     });
   </script>
 </dom-module>
